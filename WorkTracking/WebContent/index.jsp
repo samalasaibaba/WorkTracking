@@ -1,0 +1,1 @@
+<% response.sendRedirect("workstatus/login.html"); %>
