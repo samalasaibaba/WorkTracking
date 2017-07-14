@@ -32,7 +32,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 
 <property name="annotatedClasses" >
 <list>
-<!-- <value>com.workstatus.domain.Login</value> -->
+ <value>com.workstatus.domain.EmployeeDetails</value>
 
 
 <!-- <value>com.sdm.dto.Registrationdto</value> -->
