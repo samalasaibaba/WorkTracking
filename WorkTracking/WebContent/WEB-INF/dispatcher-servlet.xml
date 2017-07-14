@@ -18,7 +18,7 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 	
 	 <import resource="jasper-views.xml"/>
 	
-	<context:component-scan base-package="com.fms" />
+	<context:component-scan base-package="com.workstatus" />
 	
 	<tx:annotation-driven transaction-manager="hibernateTransactionManager" />
 
@@ -49,7 +49,7 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/fms" />
+		<property name="url" value="jdbc:mysql://localhost:3306/workstatus" />
 		<property name="username" value="root" />
 		<property name="password" value="tiger" />
 	</bean>
@@ -59,44 +59,8 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<value>com.fms.domain.Login</value>
-				<value>com.fms.domain.Complaint</value>
-				<value>com.fms.domain.ComplaintArchive</value>
-				<value>com.fms.domain.Vehicle</value>
-				<value>com.fms.domain.VehicleMotorsStatus</value>
-				<value>com.fms.domain.ExistingVehicle</value>
-				<value>com.fms.domain.Day2dayVehicleDetails</value>
-				<value>com.fms.domain.ComplaintVoucher</value>
-				<value>com.fms.domain.RefillingFuel</value>
-				<value>com.fms.domain.GeneralAsset</value>
-				<value>com.fms.domain.ItAsset</value>
-				<value>com.fms.domain.Assets</value>
-				<value>com.fms.domain.Inward</value>
-				<value>com.fms.domain.Outward</value>
-				<value>com.fms.domain.InwardQuantity</value>
-				<value>com.fms.domain.OutwardQuantity</value>
-				<value>com.fms.domain.Assets</value>
-				<value>com.fms.domain.Motors</value>
-				
-				<value>com.fms.domain.VechilePayment1</value>
-				 <value>com.fms.domain.PowerBillpayment1</value>
-			 <value>com.fms.domain.GeneratorPayment1</value>
-			 <value>com.fms.domain.WaterPurifierpayment1</value>
-			 <value>com.fms.domain.BorwellMotorPayment</value>
-				<value>com.fms.domain.ACRepairPayment</value>
-					<value>com.fms.domain.AirtelBills</value>
-						
-						<value>com.fms.domain.CityComPayments</value>
-								<value>com.fms.domain.DieselPayment</value>
-								<value>com.fms.domain.JiffySms</value>
-								<value>com.fms.domain.ParasInfotech</value>
-										
-												<value>com.fms.domain.STPmotorsPayment</value>
-										<value>com.fms.domain.TransformersPayment</value>
-										<value>com.fms.domain.SumpMotors</value>
-									<value>com.fms.domain.WaterBills</value>
-									<value>com.fms.domain.SalaryBill</value>
-									<value>com.fms.domain.XeroxMachinepayments</value> 
+				<value>com.workstatus.domain.Login</value>
+				<
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -117,18 +81,5 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-			<property name="host" value="smtp.gmail.com" />
-			<property name="port" value="587" />
-			<property name="username" value="bonalakarun@gmail.com" />
-			<property name="password" value="karun@5419493189174" />
-			<property name="javaMailProperties">
-				<props>
-					<prop key="mail.transport.protocol">smtp</prop>
-					<prop key="mail.smtp.auth">true</prop>
-					<prop key="mail.smtp.starttls.enable">true</prop>
-				</props>
-			</property>
-		</bean>
 	
 </beans>
