@@ -211,7 +211,7 @@ input:focus {
 <body>
 	<div class="login">
 		<img
-			src="C:\Users\Dreamer\Desktop\New folder (4)\images\svss_logo.png"
+			src="images/svss_logo.png"
 			alt="svss">
 		<h1>Login</h1>
 		<form method="post">
