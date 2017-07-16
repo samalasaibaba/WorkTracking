@@ -210,7 +210,7 @@ input:focus {
 
 <body>
 	<div class="login">
-		<img src="../images/logo.jpg"
+		<img src="../images/svss_logo.png"
 			alt="svss">
 		<h1>Login</h1>
 		<form method="post">
