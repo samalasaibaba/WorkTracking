@@ -210,15 +210,13 @@ input:focus {
 
 <body>
 	<div class="login">
-		<img src="../images/svss_logo.png"
-			alt="svss">
+		<img src="../images/svss_logo.png" alt="svss">
 		<h1>Login</h1>
 		<form method="post">
 			<input type="text" name="uname" placeholder="Username"
 				required="required" /> <input type="password" name="password"
 				placeholder="Password" required="required" />
-			<button type="submit" class="btn btn-primary btn-block btn-large">Let
-				me in.</button>
+			<button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
 		</form>
 	</div>
 

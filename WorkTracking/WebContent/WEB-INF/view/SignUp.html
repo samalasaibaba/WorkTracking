@@ -75,15 +75,18 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 <body>
   <div class="login">
-  <img src="images/svss_logo.png" alt="svss">
+  <img src="../images/svss_logo.png" alt="svss">
 	<h1>SignUp</h1>
-    <form method="post">
+	<script src="js/emailValidation.js"></script>
+	
+    <form method="post" name="signUpForm" onsubmit="return validateForm();">
+    
+    
 		<input type="text" name="name" placeholder="Name" required="required" />
-        <input type="number" name="mnumber" placeholder="Mobile No" required="required" />    
-    	<input type="text" name="email" placeholder="E-mail ID" required="required" />
-        <input type="text" name="uname" placeholder="User Name" required="required" />
+        <input type="text" name="mnumber" maxlength="10" placeholder="Mobile No" required="required" /> <input type="text" name="email" placeholder="E-mail ID"
+				required="required" /> <input type="text" name="uname" placeholder="User Name" required="required" />
         <input type="password" name="password" placeholder="Password" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large">SignUp</button>
     </form>
 </div>
   
