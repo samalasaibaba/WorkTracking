@@ -248,43 +248,14 @@ input:focus {
 	padding: 60px 0px 0px 0px;
 }
 </style>
-<script>
-	$(document).ready(function() {
-		$(".newemp").click(function() {
-			$("#ADDemployee").show();
-			$("#ITsoftware").hide();
-			$("#ITHardware").hide();
-			$("#IToffice").hide();
-		});
-		$(".hardware").click(function() {
-			$("#ADDemployee").hide();
-			$("#ITsoftware").hide();
-			$("#ITHardware").show();
-			$("#IToffice").hide();
-		});
-		$(".software").click(function() {
-			$("#ADDemployee").hide();
-			$("#ITsoftware").show();
-			$("#ITHardware").hide();
-			$("#IToffice").hide();
-		});
-		$(".office").click(function() {
-			$("#ADDemployee").hide();
-			$("#ITsoftware").hide();
-			$("#ITHardware").hide();
-			$("#IToffice").show();
-		});
 
-	});
-	<script src="js/prefixfree.min.js">
-</script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/prefixfree.min.js"></script>
 <script>
 	$(document).ready(function() {
 		$(".newemp").click(function() {
-			$("#ADDemployee").show();
+			$("#ADDemployee").show().Load('../view/SignUP.jsp');
 			$("#ITsoftware").hide();
 			$("#ITHardware").hide();
 			$("#IToffice").hide();
@@ -292,7 +263,7 @@ input:focus {
 		$(".hardware").click(function() {
 			$("#ADDemployee").hide();
 			$("#ITsoftware").hide();
-			$("#ITHardware").show();
+			$("#ITHardware").show().Load();
 			$("#IToffice").hide();
 		});
 		$(".software").click(function() {
@@ -324,7 +295,7 @@ input:focus {
 
 				<ul><li><a href="#" class="newemp"><font color="red">ADD NEW
 						EMPLOYEE</font></a> </li><br>
-						<li><a href="#" class="hardware">IT-Hardware</a> </li><br>
+						<li><a href="savenewemployee.html" class="hardware">IT-Hardware</a> </li><br>
 						<li><a href="#" class="software">IT-Software</a></li><br>
 					 <li><a href="#" class="office">Office</a></li>
 					 </ul>
@@ -346,7 +317,7 @@ input:focus {
 							onsubmit="return validateForm();">
 
 							<input type="text" name="EmployeeId" placeholder="EmployeeId"
-								required="required" />ex:SVSS01
+								required="required" /><font color=red">ex:SVSS01</font>
 								 <input type="text"	name="fullname" placeholder="FullName" required="required" /> <input
 								type="text" name="contactnumber" maxlength="10"
 								placeholder="Mobile No" required="required" /> <input
