@@ -342,7 +342,7 @@ input:focus {
 						<h1 ><font color="white">Add New Employee Details</font></h1>
 						<script src="js/emailValidation.js"></script>
 
-						<form method="post" name="signUpForm"
+						<form action="savenewemployee.html" method="post" name="signUpForm"
 							onsubmit="return validateForm();">
 
 							<input type="text" name="EmployeeId" placeholder="EmployeeId"

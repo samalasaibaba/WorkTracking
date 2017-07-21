@@ -2,6 +2,7 @@ package com.workstatus.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import javax.persistence.Table;
@@ -9,9 +10,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Employee_details")
 public class EmployeeDetails {
+	
+	
 	@Id
+	// Specifies the primary key generation
 	@Column(name="EID")
-	private Integer EmployeeId;
+	private String EmployeeId;
 	
 	@Column(name="UserName")
 	private String username;
@@ -27,6 +31,22 @@ public class EmployeeDetails {
 	
 	@Column(name="Contact_Number")
 	private String contactnumber;
+	
+	@Column(name="Employee_type")
+	private String EmployeeType;
+	
+
+	
+	
+	
+
+	public String getEmployeeType() {
+		return EmployeeType;
+	}
+
+	public void setEmployeeType(String employeeType) {
+		EmployeeType = employeeType;
+	}
 
 	public String getUsername() {
 		return username;
@@ -44,11 +64,11 @@ public class EmployeeDetails {
 		this.password = password;
 	}
 
-	public Integer getEmployeeId() {
+	public String getEmployeeId() {
 		return EmployeeId;
 	}
 
-	public void setEmployeeId(Integer employeeId) {
+	public void setEmployeeId(String employeeId) {
 		EmployeeId = employeeId;
 	}
 

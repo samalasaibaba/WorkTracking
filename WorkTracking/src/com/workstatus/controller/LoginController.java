@@ -5,17 +5,20 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.workstatus.domain.EmployeeDetails;
+import com.workstatus.service.WorkService;
 
 @Controller 
 @RequestMapping("/workstatus")
 public class LoginController {
-	
+	@Autowired(required=true)
+	WorkService workService;
 	
 	@RequestMapping("/login")
 	 public ModelAndView getLogin() {
@@ -43,10 +46,14 @@ public class LoginController {
 			return "login";
 		}
 		}
-		@RequestMapping("/newemployee")
-		 public ModelAndView newEmployee() {
-			System.out.println("am here");
-		  return new ModelAndView("SignUp");
+		@RequestMapping("/savenewemployee")
+		 public String savenewEmployee( @ModelAttribute("employeeDetails1") EmployeeDetails employeeDetails1) {
+			System.out.println("am in contoller");
+			
+			workService.saveEmployeeDetails(employeeDetails1);
+			
+			
+		  return "Employeedetails";
 		 }
 
 	
