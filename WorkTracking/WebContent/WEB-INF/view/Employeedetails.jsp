@@ -255,7 +255,7 @@ input:focus {
 <script>
 	$(document).ready(function() {
 		$(".newemp").click(function() {
-			$("#ADDemployee").show().Load('../view/SignUP.jsp');
+			$("#ADDemployee").show();
 			$("#ITsoftware").hide();
 			$("#ITHardware").hide();
 			$("#IToffice").hide();
@@ -295,9 +295,9 @@ input:focus {
 
 				<ul><li><a href="#" class="newemp"><font color="red">ADD NEW
 						EMPLOYEE</font></a> </li><br>
-						<li><a href="savenewemployee.html" class="hardware">IT-Hardware</a> </li><br>
-						<li><a href="#" class="software">IT-Software</a></li><br>
-					 <li><a href="#" class="office">Office</a></li>
+						<li><a href="hardwarelist.html" class="hardware">IT-Hardware</a> </li><br>
+						<li><a href="softwarelist.html" class="software">IT-Software</a></li><br>
+					 <li><a href="officelist.html" class="office">Office</a></li>
 					 </ul>
 			</div>
 			<div class="right">

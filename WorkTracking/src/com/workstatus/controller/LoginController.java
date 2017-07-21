@@ -60,5 +60,25 @@ public class LoginController {
 		  return new ModelAndView("Employeedetails");
 		 }
 
-	
-}
+
+		@RequestMapping("/hardwarelist")
+				public ModelAndView hardwareList() {
+				System.out.println("am here");
+			  return new ModelAndView("login");
+			 }
+
+		@RequestMapping("/softwrelist")
+				public ModelAndView softwrelist() {
+				System.out.println("am here");
+			  return new ModelAndView("login");
+			 }
+
+		@RequestMapping("/officelist")
+				public ModelAndView officelist() {
+				System.out.println("am here");
+			  return new ModelAndView("login");
+			 }
+			
+		}
+		
+
