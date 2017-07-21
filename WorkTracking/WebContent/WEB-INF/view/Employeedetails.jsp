@@ -109,7 +109,7 @@
 }
 
 .btn-block {
-	width: 100%;
+	width: 30%;
 	display: block;
 }
 
@@ -188,7 +188,7 @@ body {
 }
 
 input, select {
-	width: 100%;
+	width: 50%;
 	margin-bottom: 10px;
 	background: rgba(0, 0, 0, 0.3);
 	border: none;
@@ -315,18 +315,19 @@ input:focus {
 <body>
 	<div class="container">
 		<div class="logo">
-			<img src="images\svss_logo.png" alt="svss">
+			<img src="../images/svss_logo.png"  alt="svss">
 		</div>
 
 		<div class="middle">
 
 			<div class="nav">
 
-				<a href="#" class="newemp"><font color="red">ADD NEW
-						EMPLOYEE</font></a> <a href="#" class="hardware">IT-Hardware</a></br> <a href="#"
-					class="software">IT-Software</a></br> <a href="#" class="office">Office</a>
-
-
+				<ul><li><a href="#" class="newemp"><font color="red">ADD NEW
+						EMPLOYEE</font></a> </li><br>
+						<li><a href="#" class="hardware">IT-Hardware</a> </li><br>
+						<li><a href="#" class="software">IT-Software</a></li><br>
+					 <li><a href="#" class="office">Office</a></li>
+					 </ul>
 			</div>
 			<div class="right">
 
@@ -337,16 +338,16 @@ input:focus {
 				<div class="addemp">
 
 					<div id="ADDemployee">
-						<img src="../images/svss_logo.png" alt="svss">
-						<h1>SignUp</h1>
+						<!-- <img src="../images/svss_logo.png" alt="svss"> -->
+						<h1 ><font color="white">Add New Employee Details</font></h1>
 						<script src="js/emailValidation.js"></script>
 
 						<form method="post" name="signUpForm"
 							onsubmit="return validateForm();">
 
 							<input type="text" name="EmployeeId" placeholder="EmployeeId"
-								required="required" />ex:SVSS01 <input type="text"
-								name="fullname" placeholder="FullName" required="required" /> <input
+								required="required" />ex:SVSS01
+								 <input type="text"	name="fullname" placeholder="FullName" required="required" /> <input
 								type="text" name="contactnumber" maxlength="10"
 								placeholder="Mobile No" required="required" /> <input
 								type="text" name="email" placeholder="E-mail ID"
