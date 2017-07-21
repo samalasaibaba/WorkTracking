@@ -1,5 +1,7 @@
 package com.workstatus.controller;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -22,25 +24,30 @@ public class LoginController {
 	 }
 	
 	@RequestMapping("/Checklogin")
-	public ModelAndView checkLogin(HttpServletRequest request,HttpServletResponse response)
+	public String checkLogin(HttpServletRequest request,HttpServletResponse response,Map<String, Object> model)
 		{
 		
-		EmployeeDetails empd=new EmployeeDetails();
+		String adminusername=request.getParameter("adminuname");
+		String adminpassword=request.getParameter("adminpassword");
+		System.out.println(adminusername+" "+adminpassword);
+		/*EmployeeDetails empd=new EmployeeDetails();
 		String username=empd.getUsername();
-		String password=empd.getPassword();
-		String usernameequal=request.getParameter("");
-		String passwordequal=request.getParameter("");
-		if(username=="rishika"&&password=="AdminIndian")
+		String password=empd.getPassword();*/
+	
+		if(adminusername.equals("rishika")&adminpassword.equals("AdminIndian"))
 		{
-			 return new ModelAndView("login");
+			 return "Employeedetails";
 		}
-		else if(username==usernameequal &&password==passwordequal)
-		{
-			
-			 return new ModelAndView("login");
+		else {
+			model.put("message", "Enter valid UserName & Password");
+			return "login";
 		}
-		return null;
-		
-	}
+		}
+		@RequestMapping("/newemployee")
+		 public ModelAndView newEmployee() {
+			System.out.println("am here");
+		  return new ModelAndView("SignUp");
+		 }
 
+	
 }

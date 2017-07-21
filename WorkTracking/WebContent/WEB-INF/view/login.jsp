@@ -212,9 +212,9 @@ input:focus {
 	<div class="login">
 		<img src="../images/svss_logo.png" alt="svss">
 		<h1>Login</h1>
-		<form method="post">
-			<input type="text" name="uname" placeholder="Username"
-				required="required" /> <input type="password" name="password"
+		<form action="Checklogin.html"method="post">
+			<input type="text" name="adminuname" placeholder="Username"
+				required="required" /> <input type="password" name="adminpassword"
 				placeholder="Password" required="required" />
 			<button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
 		</form>
