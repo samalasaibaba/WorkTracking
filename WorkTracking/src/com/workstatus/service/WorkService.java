@@ -1,7 +1,8 @@
 package com.workstatus.service;
 
-import com.workstatus.domain.EmployeeDetails;
+
+import com.workstatus.domain.NewEmpdetails;
 
 public interface WorkService {
-	public void saveEmployeeDetails(EmployeeDetails employeeDetails1) ;
+	public int saveEmployeeDetails(NewEmpdetails newEmpdetails) ;
 }

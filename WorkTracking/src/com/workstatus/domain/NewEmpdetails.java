@@ -2,24 +2,18 @@ package com.workstatus.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
 import javax.persistence.Table;
-
 @Entity
-@Table(name="Employee_details")
-public class EmployeeDetails {
-	
-	
+@Table(name="Newemp_details")
+public class NewEmpdetails {
 	@Id
 	// Specifies the primary key generation
-	@Column(name="EID")
+	@Column(name="EmployeeId")
 	private String EmployeeId;
 	
 	@Column(name="UserName")
 	private String username;
-	
 	@Column(name="Password")
 	private String password;
 	
@@ -35,17 +29,12 @@ public class EmployeeDetails {
 	@Column(name="Employee_type")
 	private String EmployeeType;
 	
-
-	
-	
-	
-
-	public String getEmployeeType() {
-		return EmployeeType;
+	public String getEmployeeId() {
+		return EmployeeId;
 	}
 
-	public void setEmployeeType(String employeeType) {
-		EmployeeType = employeeType;
+	public void setEmployeeId(String employeeId) {
+		EmployeeId = employeeId;
 	}
 
 	public String getUsername() {
@@ -62,14 +51,6 @@ public class EmployeeDetails {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getEmployeeId() {
-		return EmployeeId;
-	}
-
-	public void setEmployeeId(String employeeId) {
-		EmployeeId = employeeId;
 	}
 
 	public String getFullname() {
@@ -95,7 +76,15 @@ public class EmployeeDetails {
 	public void setContactnumber(String contactnumber) {
 		this.contactnumber = contactnumber;
 	}
-	
+
+	public String getEmployeeType() {
+		return EmployeeType;
+	}
+
+	public void setEmployeeType(String employeeType) {
+		EmployeeType = employeeType;
+	}
+
 	
 	
 

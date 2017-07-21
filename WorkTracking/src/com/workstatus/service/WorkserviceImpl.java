@@ -4,14 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.workstatus.dao.WorkstatusDao;
-import com.workstatus.domain.EmployeeDetails;
+
+import com.workstatus.domain.NewEmpdetails;
 
 @Repository("WorkService")
 public class WorkserviceImpl implements WorkService {
 	@Autowired(required=true)
 	WorkstatusDao workstatusDao;
-	public void saveEmployeeDetails(EmployeeDetails employeeDetails1) {
-		 workstatusDao.saveEmployeeDetails(employeeDetails1);
+	
+	public int saveEmployeeDetails(NewEmpdetails newEmpdetails) {
+		System.out.println("am in dao");
+		return workstatusDao.saveEmployeeDetails(newEmpdetails);
 	}
 
 }

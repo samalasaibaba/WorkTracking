@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.workstatus.domain.EmployeeDetails;
+
+import com.workstatus.domain.NewEmpdetails;
 import com.workstatus.service.WorkService;
 
 @Controller 
@@ -47,13 +48,15 @@ public class LoginController {
 		}
 		}
 		@RequestMapping("/savenewemployee")
-		 public String savenewEmployee( @ModelAttribute("employeeDetails1") EmployeeDetails employeeDetails1) {
+		 public ModelAndView savenewEmployee(@ModelAttribute("newEmpdetails")
+		  NewEmpdetails newEmpdetails, Map<String, Object> model) throws Exception
+		{
 			System.out.println("am in contoller");
 			
-			workService.saveEmployeeDetails(employeeDetails1);
+			workService.saveEmployeeDetails(newEmpdetails);
 			
 			
-		  return "Employeedetails";
+		  return new ModelAndView("Employeedetails");
 		 }
 
 	

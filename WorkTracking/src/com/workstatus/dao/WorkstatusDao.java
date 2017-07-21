@@ -1,8 +1,9 @@
 package com.workstatus.dao;
 
-import com.workstatus.domain.EmployeeDetails;
+
+import com.workstatus.domain.NewEmpdetails;
 
 public interface WorkstatusDao {
-	public void saveEmployeeDetails(EmployeeDetails employeeDetails1) ;
+	public int saveEmployeeDetails(NewEmpdetails newEmpdetails) ;
 
 }
