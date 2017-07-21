@@ -12,7 +12,7 @@ public class WorkserviceImpl implements WorkService {
 	@Autowired(required=true)
 	WorkstatusDao workstatusDao;
 	
-	public int saveEmployeeDetails(NewEmpdetails newEmpdetails) {
+	public boolean saveEmployeeDetails(NewEmpdetails newEmpdetails) {
 		System.out.println("am in dao");
 		return workstatusDao.saveEmployeeDetails(newEmpdetails);
 	}

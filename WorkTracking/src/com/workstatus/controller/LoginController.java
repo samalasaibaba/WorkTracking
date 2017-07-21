@@ -21,6 +21,7 @@ public class LoginController {
 	@Autowired(required=true)
 	WorkService workService;
 	
+	
 	@RequestMapping("/login")
 	 public ModelAndView getLogin() {
 		System.out.println("am here");
@@ -52,8 +53,8 @@ public class LoginController {
 		  NewEmpdetails newEmpdetails, Map<String, Object> model) throws Exception
 		{
 			System.out.println("am in contoller");
-			
-			workService.saveEmployeeDetails(newEmpdetails);
+			boolean flag=false;
+			 flag = workService.saveEmployeeDetails(newEmpdetails);
 			
 			
 		  return new ModelAndView("Employeedetails");

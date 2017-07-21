@@ -20,16 +20,19 @@ public class WorkstatusDaoImpl implements WorkstatusDao {
 	@Autowired(required=true)
 	SessionFactory sessionFactory;
 	
-	public int saveEmployeeDetails(NewEmpdetails newEmpdetails) 
+	public boolean saveEmployeeDetails(NewEmpdetails newEmpdetails) 
 	
 	{
 		Session session = sessionFactory.openSession();
 	  Transaction tx = session.beginTransaction();
+	  boolean flag=false;
+	  
 	  session.saveOrUpdate(newEmpdetails);
 	  tx.commit();
-	  Serializable id = session.getIdentifier(newEmpdetails);
+	 
 	  session.close();
-	  return (Integer) id;
+	  flag=true;
+	  return flag;
 		
 }
 }
