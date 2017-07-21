@@ -64,7 +64,10 @@ public class LoginController {
 		@RequestMapping("/hardwarelist")
 				public ModelAndView hardwareList() {
 				System.out.println("am here");
-			  return new ModelAndView("login");
+				
+				workService.hardwareEmplist();
+				System.out.println("am c here");
+			  return new ModelAndView("Employeedetails");
 			 }
 
 		@RequestMapping("/softwrelist")

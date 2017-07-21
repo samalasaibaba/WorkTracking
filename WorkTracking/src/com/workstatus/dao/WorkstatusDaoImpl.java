@@ -1,6 +1,7 @@
 package com.workstatus.dao;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.hibernate.Session;
 
@@ -9,7 +10,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 
 
 import com.workstatus.domain.NewEmpdetails;
@@ -35,4 +35,48 @@ public class WorkstatusDaoImpl implements WorkstatusDao {
 	  return flag;
 		
 }
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<NewEmpdetails> hardwareEmplist() {
+		Session session = sessionFactory.openSession();
+		  Transaction tx = session.beginTransaction();
+		  String hardware="IT-Hardware";
+		String hql = "FROM NewEmpdetails v WHERE v.EmployeeType='"+hardware+"'";
+
+		List<NewEmpdetails> list = session.createQuery(hql).list();
+		tx.commit();
+		 
+		  session.close();
+		return list;
+	}
+
+	@Override
+	public List<NewEmpdetails> softwareEmplist() {
+		
+		Session session = sessionFactory.openSession();
+		  Transaction tx = session.beginTransaction();
+		  String hardware="IT-Software";
+		String hql = "FROM NewEmpdetails v WHERE v.EmployeeType='"+hardware+"'";
+
+		List<NewEmpdetails> list = session.createQuery(hql).list();
+		tx.commit();
+		 
+		  session.close();
+		return list;
+	}
+
+	@Override
+	public List<NewEmpdetails> officeEmplist() {
+		Session session = sessionFactory.openSession();
+		  Transaction tx = session.beginTransaction();
+		  String hardware="IT-Office";
+		String hql = "FROM NewEmpdetails v WHERE v.EmployeeType='"+hardware+"'";
+
+		List<NewEmpdetails> list = session.createQuery(hql).list();
+		tx.commit();
+		 
+		  session.close();
+		return list;
+	}
 }
